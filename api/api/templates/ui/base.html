@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ SITE_NAME }} - {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="/static/src/output.css">
+    {% block head %}{% endblock head %}
+</head>
+
+<body class="bg-gray-50">
+    {% block header %}{% endblock %}
+    
+    <div class="flex min-h-screen">
+        {% block sidebar %}{% endblock %}
+        
+        <main class="flex-1">
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </div>
+
+    {% block footer %}
+    <footer class="py-4 text-center text-gray-500">
+        <p>&copy; {% now "Y" %} {{ SITE_NAME }}. {% translate "All rights reserved." %}</p>
+    </footer>
+    {% endblock %}
+
+    {% block scripts %}{% endblock scripts %}
+</body>
+</html>

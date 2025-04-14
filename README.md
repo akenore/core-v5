@@ -9,13 +9,16 @@ A modern Django application with Next.js frontend integration.
   - Password reset functionality
   - Password change for authenticated users
   - Email verification
+
 - 🎨 Modern UI
   - Tailwind CSS v4 for styling
   - Responsive design for all devices
   - Clean and minimalist interface
+
 - 🌐 Internationalization
   - Multi-language support
   - English and French translations
+
 - 🔒 Security
   - CSRF protection
   - Secure password handling
@@ -27,10 +30,12 @@ A modern Django application with Next.js frontend integration.
   - Django 5.2
   - Python 3.13
   - SQLite (development)
+
 - Frontend:
   - Next.js (main application)
   - Tailwind CSS v4
   - Django Templates (admin interface)
+
 - Additional:
   - GraphQL API
   - CKEditor 5 integration
@@ -39,23 +44,27 @@ A modern Django application with Next.js frontend integration.
 ## Setup
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/akenore/core-v5.git
+git clone <https://github.com/akenore/core-v5.git>
 cd core-v5
 ```
 
-2. Create a virtual environment:
+2.Create a virtual environment:
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3.Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Create .env file:
+4.Create .env file:
+
 ```bash
 SECRET_KEY=your-secret-key
 DEBUG=True
@@ -69,17 +78,20 @@ EMAIL_HOST_USER=your-email@gmail.com
 EMAIL_HOST_PASSWORD=your-app-password
 ```
 
-5. Run migrations:
+5.Run migrations:
+
 ```bash
 python manage.py migrate
 ```
 
-6. Create a superuser:
+6.Create a superuser:
+
 ```bash
 python manage.py createsuperuser
 ```
 
-7. Run the development server:
+7.Run the development server:
+
 ```bash
 python manage.py runserver
 ```
@@ -112,7 +124,7 @@ python manage.py compilemessages
 
 ## Project Structure
 
-```
+```bash
 api/
 ├── api/
 │   ├── templates/
@@ -129,10 +141,14 @@ api/
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+
+1. Create your feature branch (`git checkout -b feature/amazing-feature`)
+
+1. Commit your changes (`git commit -m 'Add some amazing feature'`)
+
+1. Push to the branch (`git push origin feature/amazing-feature`)
+
+1. Open a Pull Request
 
 ## License
 
@@ -140,6 +156,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Author
 
-**Muhammad Aslan**
-- Email: joudakenore@gmail.com
-- Phone: +216 55 000 359 
+### Muhammad Aslan
+
+- Email: <joudakenore@gmail.com>
+- Phone: +216 55 000 359

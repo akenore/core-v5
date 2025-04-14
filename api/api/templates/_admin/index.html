@@ -1,1 +1,7 @@
-heloo {{ user.username }}
+{% extends "ui/base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+Hi, {{ user.username }}
+{% endblock content%}
