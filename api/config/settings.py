@@ -15,6 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 SITE_NAME = config('SITE_NAME')
+SITE_LOGO = config('SITE_LOGO', default='/static/images/logo.svg')
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
