@@ -1,4 +1,4 @@
-# Strakon v5
+# Core v5
 
 A modern Django application with Next.js frontend integration.
 
