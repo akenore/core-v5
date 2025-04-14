@@ -1,0 +1,8 @@
+Django
+Pillow
+python-decouple
+django-cors-headers
+django-ckeditor-5
+django-autoslug
+django-countries
+graphene-django

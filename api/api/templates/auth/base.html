@@ -1,0 +1,35 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% trans "Strakon" %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-gray-50">
+    <main class="min-h-screen flex flex-col">
+        <div class="flex-grow">
+            <div class="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
+                {% if messages %}
+                <div class="mb-4">
+                    {% for message in messages %}
+                    <div class="rounded-md p-4 {% if message.tags == 'error' %}bg-red-50 text-red-700{% else %}bg-green-50 text-green-700{% endif %}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <footer class="py-4 text-center text-gray-600">
+            <p>&copy; {% now "Y" %} {{ SITE_NAME }}. {% translate "All rights reserved." %}</p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html> 

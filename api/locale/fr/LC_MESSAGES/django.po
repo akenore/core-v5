@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-14 20:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: api/templates/auth/login.html:4
+msgid "Login"
+msgstr ""
+
+#: api/templates/auth/login.html:4 api/templates/auth/password_reset.html:4
+#: api/templates/auth/password_reset_confirm.html:4
+#: api/templates/ui/base.html:7 api/templates/ui/base.html:41
+msgid "Strakon"
+msgstr ""
+
+#: api/templates/auth/login.html:11
+msgid "Sign in to your account"
+msgstr ""
+
+#: api/templates/auth/login.html:18 api/templates/auth/login.html:21
+msgid "Username"
+msgstr ""
+
+#: api/templates/auth/login.html:24 api/templates/auth/login.html:27
+msgid "Password"
+msgstr ""
+
+#: api/templates/auth/login.html:36
+msgid "Remember me"
+msgstr ""
+
+#: api/templates/auth/login.html:42
+msgid "Forgot your password?"
+msgstr ""
+
+#: api/templates/auth/login.html:50
+msgid "Sign in"
+msgstr ""
+
+#: api/templates/auth/password_reset.html:4
+msgid "Reset Password"
+msgstr ""
+
+#: api/templates/auth/password_reset.html:11
+msgid "Reset your password"
+msgstr ""
+
+#: api/templates/auth/password_reset.html:14
+msgid ""
+"Enter your email address and we'll send you a link to reset your password."
+msgstr ""
+
+#: api/templates/auth/password_reset.html:21
+#: api/templates/auth/password_reset.html:24
+msgid "Email address"
+msgstr ""
+
+#: api/templates/auth/password_reset.html:31
+msgid "Send reset link"
+msgstr ""
+
+#: api/templates/auth/password_reset_confirm.html:4
+msgid "Set New Password"
+msgstr ""
+
+#: api/templates/auth/password_reset_confirm.html:11
+msgid "Set new password"
+msgstr ""
+
+#: api/templates/auth/password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: api/templates/auth/password_reset_confirm.html:21
+#: api/templates/auth/password_reset_confirm.html:24
+msgid "New password"
+msgstr ""
+
+#: api/templates/auth/password_reset_confirm.html:27
+#: api/templates/auth/password_reset_confirm.html:30
+msgid "Confirm new password"
+msgstr ""
+
+#: api/templates/auth/password_reset_confirm.html:37
+msgid "Change password"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:3
+msgid "Hello"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:5
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"account at"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:7
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:12
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:14
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:16
+msgid "The"
+msgstr ""
+
+#: api/templates/auth/password_reset_email.html:16
+msgid "team"
+msgstr ""
+
+#: api/templates/auth/password_reset_subject.txt:2
+msgid "Password reset on"
+msgstr ""
+
+#: api/templates/ui/base.html:48
+msgid "Logout"
+msgstr ""
+
+#: api/templates/ui/base.html:76
+msgid "Strakon. All rights reserved."
+msgstr ""
