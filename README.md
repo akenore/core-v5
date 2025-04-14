@@ -40,8 +40,8 @@ A modern Django application with Next.js frontend integration.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/strakon-v5.git
-cd strakon-v5
+git clone https://github.com/akenore/core-v5.git
+cd core-v5
 ```
 
 2. Create a virtual environment:
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 ```bash
 SECRET_KEY=your-secret-key
 DEBUG=True
-SITE_NAME=Strakon
+SITE_NAME=Core-V5
 
 # Email settings (for password reset)
 EMAIL_HOST=smtp.gmail.com
