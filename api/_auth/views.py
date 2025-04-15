@@ -9,6 +9,13 @@ from django.contrib.auth.forms import (
     SetPasswordForm,
 )
 from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib import messages
+from django.shortcuts import redirect
+from django.urls import reverse_lazy
+from django.utils.translation import gettext as _
+from django.contrib.auth import update_session_auth_hash
 
 class LoginView(auth_views.LoginView):
     template_name = '_auth/login.html'
@@ -52,3 +59,53 @@ class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
     template_name = '_auth/password_reset_complete.html'
 
 
+class SettingsView(LoginRequiredMixin, TemplateView):
+    template_name = '_auth/settings.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['user'] = self.request.user
+        return context
+
+    def post(self, request, *args, **kwargs):
+        if 'update_profile' in request.POST:
+            return self.update_profile(request)
+        elif 'change_password' in request.POST:
+            return self.change_password(request)
+        return self.get(request, *args, **kwargs)
+
+    def update_profile(self, request):
+        user = request.user
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        
+        if first_name:
+            user.first_name = first_name
+        if last_name:
+            user.last_name = last_name
+        if email:
+            user.email = email
+        
+        user.save()
+        messages.success(request, _('Profile updated successfully'))
+        return redirect('_auth:settings')
+
+    def change_password(self, request):
+        form = PasswordChangeForm(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            messages.success(request, _('Password changed successfully'))
+            return redirect('_auth:settings')
+        else:
+            messages.error(request, _('Please correct the errors below.'))
+            return self.get(request, password_form=form)
+
+class CustomPasswordChangeView(PasswordChangeView):
+    template_name = '_auth/settings.html'
+    success_url = reverse_lazy('_auth:settings')
+    
+    def form_valid(self, form):
+        messages.success(self.request, _('Password changed successfully'))
+        return super().form_valid(form)

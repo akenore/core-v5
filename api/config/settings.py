@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
-SITE_NAME = config('SITE_NAME')
+SITE_NAME = config('SITE_NAME' , default='Core V5')
 SITE_LOGO = config('SITE_LOGO', default='/static/logo/light-logo.png')
 
 if DEBUG:
