@@ -16,7 +16,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 SITE_NAME = config('SITE_NAME' , default='Core V5')
 SITE_LOGO = config('SITE_LOGO', default='/static/logo/light-logo.png')
-
+SITE_FAVICON = config('SITE_FAVICON', default='/static/pwa/light-logo-1024.png')
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
