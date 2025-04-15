@@ -157,4 +157,4 @@ GRAPHENE = {
 
 LOGIN_URL = '_auth:login'
 LOGIN_REDIRECT_URL = 'api:index'
-LOGOUT_REDIRECT_URL = 'api:login'
+LOGOUT_REDIRECT_URL = '_auth:login'
