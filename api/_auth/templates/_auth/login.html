@@ -1,4 +1,4 @@
-{% extends "auth/base.html" %}
+{% extends "_auth/base.html" %}
 {% load i18n %}
 
 {% block title %}{% translate "Login" %} - {{ SITE_NAME }}{% endblock %}
@@ -26,7 +26,7 @@
 
     <div class="flex items-center justify-between">
         <div class="text-sm">
-            <a href="{% url 'api:password_reset' %}" class="font-medium text-primary-600 hover:text-primary-500">
+            <a href="{% url '_auth:password_reset' %}" class="font-medium text-primary-600 hover:text-primary-500">
                 {% translate "Forgot your password?" %}
             </a>
         </div>

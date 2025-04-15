@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 SITE_NAME = config('SITE_NAME')
-SITE_LOGO = config('SITE_LOGO', default='/static/images/logo.svg')
+SITE_LOGO = config('SITE_LOGO', default='/static/logo/light-logo.png')
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
     'graphene_django',
     'api',
+    '_auth',
 ]
 
 MIDDLEWARE = [
@@ -154,6 +155,6 @@ GRAPHENE = {
     "SCHEMA": "api.schema.schema"
 }
 
-LOGIN_URL = 'api:login'
+LOGIN_URL = '_auth:login'
 LOGIN_REDIRECT_URL = 'api:index'
 LOGOUT_REDIRECT_URL = 'api:login'

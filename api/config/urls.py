@@ -10,7 +10,7 @@ urlpatterns = [
     path("ckeditor5/", include('django_ckeditor_5.urls')),
     path("graphql", GraphQLView.as_view(graphiql=True)),
     path('', include('api.urls')),
-
+    path('', include('_auth.urls')),
 ]
 
 if settings.DEBUG:
